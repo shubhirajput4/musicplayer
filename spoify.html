@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="spotify.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="nav">
+        <div class="logo">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.kmutKFfUGlSb7rgr50w-CAHaHa&pid=Api&P=0&h=220" alt="Logo">
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for songs, artists, or albums...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Playlist Section -->
+        <div class="playlists">
+            <h2>Your Playlists</h2>
+            <div class="playlist-grid">
+                <div class="playlist-card">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.ToZC_liMBFyfn567DlmrEQHaEK&pid=Api&P=0&h=220" alt="Good Vibes Music">
+                    <p>Good Vibes Music</p>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.mAwavlCvYvGHtgsCgAiEIgHaEK&pid=Api&P=0&h=220" alt="Sad Songs">
+                    <p>Sad Songs</p>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.uGNCfhQLY-vbsfx2p5tYzAHaHa&pid=Api&P=0&h=220" alt="Top Hits">
+                    <p>Top Hits</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Song List Section -->
+        <section class="song-list">
+            <h2>Top Songs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Duration</th>
+                        <th>Play</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Christmas 5 </td>
+                        <td>Magenta Six</td>
+                        <td>3:10</td>
+                        <td><button class="play-btn"><i class="fas fa-play"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Chinese New Year is Coming</td>
+                        <td>Alex-Productions</td>
+                        <td>2:00</td>
+                        <td><button class="play-btn"><i class="fas fa-play"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sad & Romantic Short Version / Piano & Strings </td>
+                        <td>Lowtone Music</td>
+                        <td>0:50</td>
+                        <td><button class="play-btn"><i class="fas fa-play"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Song Info -->
+            <div class="song-info">
+                <img id="song-image" src="default.jpg" alt="Song Image">
+                <div>
+                    <p id="song-name">Song Name</p>
+                    <p id="song-artist">Artist Name</p>
+                </div>
+            </div>
+
+            <!-- Music Player -->
+            <div class="music-player">
+                <button id="prev"><i class="fas fa-backward"></i></button>
+                <button id="play-pause"><i class="fas fa-play"></i></button>
+                <button id="next"><i class="fas fa-forward"></i></button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" value="0" min="0" max="100">
+                <span id="duration">3:00</span>
+            </div>
+        </div>
+    </footer>
+    <script src="spotify.js"> </script>
+</body>
+</html>
